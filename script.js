@@ -9,31 +9,70 @@ document.addEventListener("scroll", () => {
 });
 
 // Demo Contact Form
-document.querySelector("form").addEventListener("submit", (e) => {
-  e.preventDefault();
-  alert("Message Sent Successfully!");
-});
-//drag and drop
-document.querySelectorAll(".subject-box").forEach(box => {
-    box.addEventListener("click", () => {
-        const targetId = box.getAttribute("data-target");
-        const panel = document.getElementById(targetId);
-
-        panel.style.display = (panel.style.display === "block") ? "none" : "block";
-    });
-});
-//achivment section
-function toggleAchievement(id) {
-    const box = document.getElementById(id).closest(".subject-box");
-    const content = document.getElementById(id);
-
-    // toggle background color white/purple
-    box.classList.toggle("open");
-
-    // show/hide achievements
-    if (content.style.display === "block") {
-        content.style.display = "none";
-    } else {
-        content.style.display = "block";
-    }
+const form = document.querySelector("form");
+if (form) {
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    alert("Message Sent Successfully!");
+  });
 }
+
+// --- Close all panels ---
+function closeAllPanels() {
+  document.querySelectorAll(".panel").forEach(panel => {
+    panel.style.display = "none";
+  });
+  document.querySelectorAll(".subject-box").forEach(box => {
+    box.classList.remove("open", "open-achievement");
+  });
+}
+
+// --- Assignment Toggle ---
+function toggleAssignment(id) {
+  const panel = document.getElementById(id);
+  const box = panel.closest(".subject-box");
+  if (!panel) return;
+
+  // If already open, just close it
+  if (panel.style.display === "block") {
+    panel.style.display = "none";
+    box.classList.remove("open");
+  } else {
+    closeAllPanels();
+    panel.style.display = "block";
+    box.classList.add("open");
+  }
+}
+
+// --- Achievement Toggle ---
+function toggleAchievement(id) {
+  const panel = document.getElementById(id);
+  const box = panel.closest(".subject-box");
+  if (!panel) return;
+
+  // If already open, just close it
+  if (panel.style.display === "block") {
+    panel.style.display = "none";
+    box.classList.remove("open-achievement");
+  } else {
+    closeAllPanels();
+    panel.style.display = "block";
+    box.classList.add("open-achievement");
+  }
+}
+
+// Click handlers for assignments
+document.querySelectorAll(".assignment-box").forEach(box => {
+  box.querySelector(".subject-btn").addEventListener("click", () => {
+    const targetId = box.getAttribute("data-target");
+    toggleAssignment(targetId);
+  });
+});
+
+// Click handlers for achievements
+document.querySelectorAll(".achievement-box").forEach(box => {
+  box.querySelector(".subject-btn").addEventListener("click", () => {
+    const targetId = box.getAttribute("data-target");
+    toggleAchievement(targetId);
+  });
+});
