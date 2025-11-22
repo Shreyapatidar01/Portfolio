@@ -25,7 +25,7 @@ body {
 }
 
 section {
-  padding: 70px 20px; /* Reduced so hero appears first */
+  padding: 70px 20px;
 }
 
 /* --------------------------------------------------------
@@ -33,7 +33,7 @@ section {
 -------------------------------------------------------- */
 nav {
   width: 100%;
-  height: 60px;  /* Fixed height */
+  height: 60px;
   position: fixed;
   top: 0;
   left: 0;
@@ -56,6 +56,7 @@ nav .menu a {
   text-decoration: none;
   color: #333;
   font-weight: 600;
+  transition: 0.3s ease;
 }
 
 nav .menu a:hover {
@@ -71,7 +72,7 @@ nav .menu a:hover {
   justify-content: space-between;
   gap: 40px;
   flex-wrap: wrap;
-  margin-top: 80px; /* Makes hero always appear first */
+  margin-top: 80px;
 }
 
 .hero-text {
@@ -128,6 +129,7 @@ nav .menu a:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 18px rgba(108, 92, 231, 0.3);
 }
+
 .btn-small {
   display: inline-block;
   padding: 8px 18px;
@@ -187,6 +189,12 @@ nav .menu a:hover {
   padding: 30px;
   border-radius: 18px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
 }
 
 .card p {
@@ -208,6 +216,12 @@ nav .menu a:hover {
   padding: 20px;
   border-radius: 15px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-box:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 .skill-box h3 {
@@ -220,84 +234,93 @@ nav .menu a:hover {
   font-size: 16px;
 }
 
-/* ---------------------------
-   ASSIGNMENTS (Column Wise)
----------------------------- */
-
-
+/* --------------------------------------------------------
+   ASSIGNMENTS & ACHIEVEMENTS BOXES
+-------------------------------------------------------- */
 .subjects-section {
     text-align: center;
-    padding: 40px;
+    padding: 40px 0;
 }
 
 .subject-container {
     display: flex;
     justify-content: center;
     gap: 25px;
-    margin-top: 30px;
     flex-wrap: wrap;
 }
 
-/* Soft Light Purple Card */
-
-/* Square Card Style */
 .subject-box {
-    background: #e8d9ff;        /* light soft purple */
-    color: #4a2e8b;
-    width: 250px;               /* fixed width */
-    height: 250px;              /* fixed height -> makes box square */
-    padding: 20px;
-    border-radius: 25px;        /* smooth curved edges */
-    text-align: center;
-    cursor: pointer;
-    transition: 0.3s ease;
-    font-size: 20px;
-    font-weight: 600;
+    width: 250px;
+    height: 250px;
+    background: #e8d9ff;      /* default soft purple */
     border: 2px solid #d3b5ff;
+    border-radius: 20px;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    color: #4a2e8b;
+    transition: 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
     display: flex;
-    align-items: center;        /* vertically center text */
-    justify-content: center;    /* horizontally center text */
-    flex-direction: column;     /* so dropdown appears below */
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    align-items: center;
+    justify-content: center;
 }
+
 .subject-box:hover {
     background: #d6c2ff;
     transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 8px 18px rgba(108, 92, 231, 0.3);
 }
-.internal-list {
-    width: 90%;
-    margin-top: 15px;
+
+/* Sequential hover colors (1,2,3) */
+.subject-container .subject-box:nth-child(1):hover { background: #d6c2ff; }
+.subject-container .subject-box:nth-child(2):hover { background: #c8a0ff; }
+.subject-container .subject-box:nth-child(3):hover { background: #b78cff; }
+
+/* When opened → white background */
+.subject-box.open {
     background: white;
-    border: 2px solid #c8a9ff;
-    padding: 15px;
-    border-radius: 15px;
-    font-size: 16px;
-    display: none;
+    border-color: #c09cff;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
-/* Dropdown box (white + purple border) */
 
+/* Buttons inside boxes */
+.subject-btn {
+    background: none;
+    border: none;
+    color: #4a2e8b;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
 
-/* Purple links */
-.internal-list a {
+.subject-btn:hover {
+    color: #6b4ce6;
+}
+
+/* Panels hidden by default */
+.panel {
+    display: none;
+    margin-top: 15px;
+    width: 100%;
+    text-align: left;
+    font-size: 16px;
+    color: #4a2e8b;
+}
+
+/* Links inside panels */
+.panel a {
     color: #7b4bff;
     font-weight: 600;
     text-decoration: none;
 }
 
-.internal-list a:hover {
+.panel a:hover {
     text-decoration: underline;
-}
-
-/* Mobile Responsive */
-@media(max-width: 768px) {
-    .subject-box {
-        width: 80%;
-    }
-}
-@media(max-width: 768px) {
-    .achievment,.assignment {
-        width: 100%;
-        font-size: 14px;
-    }
 }
 
 /* --------------------------------------------------------
@@ -337,7 +360,7 @@ nav .menu a:hover {
   grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
   gap: 20px;
 }
-/* Hover effect for education cards */
+
 .edu-grid .card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -345,59 +368,6 @@ nav .menu a:hover {
 .edu-grid .card:hover {
   transform: translateY(-8px) scale(1.03);
   box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-}
-/*-------------------------------------------------
- Achievements Section 
--------------------------------------------------*/
-#achievements {
-    padding: 70px 0;
-    text-align: center;
-}
-
-.subject-container {
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 30px;
-}
-
-/* Purple box */
-.subject-box {
-    width: 260px;
-    background: #e8d9ff;
-    border: 2px solid #d3b5ff;
-    border-radius: 20px;
-    padding: 20px;
-    text-align: center;
-    color: #4a2e8b;
-    transition: 0.3s ease;
-    cursor: pointer;
-}
-
-/* When opened → white */
-.subject-box.open {
-    background: white;
-    border-color: #c09cff;
-}
-
-/* Button text (title) */
-.subject-btn {
-    background: none;
-    border: none;
-    color: #4a2e8b;
-    font-size: 20px;
-    font-weight: 700;
-    cursor: pointer;
-}
-
-/* Hidden content */
-.achievement-content {
-    margin-top: 15px;
-    display: none;
-    text-align: left;
-    font-size: 16px;
-    color: #4a2e8b;
 }
 
 /* --------------------------------------------------------
@@ -425,7 +395,6 @@ nav .menu a:hover {
   color: #4b34d3;
   transform: translateY(-5px);
 }
-
 
 /* --------------------------------------------------------
    FOOTER
@@ -456,6 +425,10 @@ footer {
    RESPONSIVE DESIGN
 -------------------------------------------------------- */
 @media (max-width: 768px) {
+  .subject-box {
+    width: 80%;
+    margin-bottom: 15px;
+  }
 
   nav .menu a {
     margin-left: 10px;
@@ -464,10 +437,6 @@ footer {
 
   .hero-text h1 {
     font-size: 36px;
-  }
-
-  .hero-img {
-    margin: auto;
   }
 
   .home-flex {
@@ -482,11 +451,6 @@ footer {
 }
 
 @media (max-width: 480px) {
-
-  nav {
-    padding: 10px 15px;
-  }
-
   .hero-text h1 {
     font-size: 28px;
   }
