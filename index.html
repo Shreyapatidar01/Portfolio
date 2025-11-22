@@ -20,6 +20,7 @@
       <a href="#assignment">Assignment</a>
       <a href="#projects">Projects</a>
       <a href="#education">Education</a>
+      <a href="#achievements">Achievements</a>
       <a href="#contact">Contact</a>
     </div>
   </nav>
@@ -35,10 +36,11 @@
       <a href="#contact" class="btn btn-outline">Contact Me</a>
 
       <div class="social-icons">
-        <a href="https://github.com/Shreyapatidar01" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/shreya-patidar-961535293?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://youtube.com/@shreyapatidar-p3x2l?si=KrQB7rZk6ZMmrGib" target="_blank"><i class="fab fa-youtube"></i></a>
         <a href="mailto:shreyapatidar2006@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a>
+         <a href="https://www.linkedin.com/in/shreya-patidar-961535293?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://youtube.com/@shreyapatidar-p3x2l?si=KrQB7rZk6ZMmrGib" target="_blank"><i class="fab fa-youtube"></i></a>
+        
       </div>
     </div>
 
@@ -93,40 +95,41 @@
     </div>
   </section>
 
-<section id="assignments">
-  <h2>Assignments</h2>
-  <p>This section showcases my academic work, projects, and assessments completed during the MCA program.</p>
+<!-- Assignment -->
+ 
+<section id="assignment" class="subjects-section">
+    <h2 class="section-title">Assignments</h2>
+    <p>This section showcases my academic work, projects, and assessments completed during the MCA program.</p>
 
-  <!-- Internal 1 -->
-  <div class="assignment">
-    <h3>Internal Assessment 1 (Sections A, B, C, D)</h3>
-    <p><strong>Course:</strong> Introduction to Data Science – MCA 5th Semester</p>
-    <p><strong>Description:</strong> Completed sections A, B, C, and D covering Statical characterisation, Similarity and Dissimilarity, Data Preprocessing, and Compatibility and Pairing.</p>
-    <p><strong>Video Demo:</strong> 
-      <a href="https://www.youtube.com/watch?v=YOUR_INTERNAL1_LINK" target="_blank">Watch on YouTube</a>
-    </p>
-  </div>
+    <div class="subject-container">
 
-  <!-- Internal 2 -->
-  <div class="assignment">
-    <h3>Internal Assessment 2 (Sections A, B, C, D)</h3>
-    <p><strong>Course:</strong>  Introduction to Data Science – MCA 5th Semester </p>
-    <p><strong>Description:</strong>Completed sections A, B, C, and D covering Data Cleaning ,Machine learning ,Deep learning and Python</p>
-    <p><strong>Video Demo:</strong> 
-      <a href="https://www.youtube.com/watch?v=YOUR_INTERNAL2_LINK" target="_blank">Watch on YouTube</a>
-    </p>
-  </div>
-</section>
+        <!-- Data Science -->
+        <div class="subject-box" data-target="ds">
+            <b>Data Science</b>
+            <div id="ds" class="internal-list">
+                <p>• <a href="#">Internal 1</a></p>
+                <p>• <a href="#">Internal 2</a></p>
+                <p>• <a href="#">Assignment</a></p>
+            </div>
+        </div>
 
-  <!-- Final Assignment -->
-  <div class="assignment">
-    <h3>Assignment</h3>
-    <p><strong>Course:</strong> Introduction to Data Science – MCA 5th Semester</p>
-    <p><strong>Description:</strong> Implemented Supervised and Unsupervised learning ,Confusion Matrix,Hot-encoding and Missing value.</p>
-    <p><strong>Video Demo:</strong> 
-      <a href="https://www.youtube.com/playlist?list=PLlpX--uN6F6vmSyhSMQP1RATmogmcB9_q" target="_blank">Watch on YouTube</a>
-    </p>
-  </div>
+        <!-- Computer Graphics -->
+        <div class="subject-box" data-target="cg">
+            <b>Computer Graphics</b>
+            <div id="cg" class="internal-list">
+                <p>• <a href="#">Assignment</a></p>
+            </div>
+        </div>
+
+        <!-- Unix -->
+        <div class="subject-box" data-target="unix">
+           <b> Unix & Shell Programming</b>
+            <div id="unix" class="internal-list">
+                <p>• <a href="#">Assignment</a></p>
+            </div>
+        </div>
+
+    </div>
 </section>
 
 
@@ -181,19 +184,83 @@
   </div>
 </section>
 
+<!-- // -->
+
+<!-- ⭐ ACHIEVEMENTS SECTION -->
+<section id="achievements">
+    <div class="container">
+        <h2>Achievements</h2>
+        <p>My sports achievements at State and National levels.</p>
+
+        <div class="subject-container">
+
+            <!-- STATE -->
+            <div class="subject-box">
+                <button class="subject-btn" onclick="toggleAchievement('state-ach')">
+                    🏅 State Level Achievements
+                </button>
+
+                <div id="state-ach" class="achievement-content">
+                    <ul>
+                        <li><strong>Sports:</strong> Tennis Volleyball</li>
+                        <li>🥇 3-Time State Player</li>
+                        <li>🏅🏅 2 × Gold Medals</li>
+                        <li>🥉 1 × Bronze Medal</li>
+                        <li>🧢 Served as Captain of State Team</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- NATIONAL -->
+            <div class="subject-box">
+                <button class="subject-btn" onclick="toggleAchievement('national-ach')">
+                    🏆 National Level Achievements
+                </button>
+
+                <div id="national-ach" class="achievement-content">
+                    <ul>
+                        <li><strong>Sports:</strong> Tennis Volleyball</li>
+                        <li>🥇🥇 2-Time National Player</li>
+                        <li>🌄 Represented Madhya Pradesh</li>
+                        <li>🧢 Captain of National Team</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
 
   <!-- Contact -->
   <section id="contact">
     <div class="container">
-      <h2>Contact</h2>
-      <form>
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
-        <textarea placeholder="Message" rows="5"></textarea>
-        <button type="submit">Send Message</button>
-      </form>
+        <h2>Contact</h2>
+        <p>Connect with me on my social platforms</p>
+
+        <div class="contact-icons">
+            <a href="mailto:shreyapatidar2006@gmail.com">
+                <i class="fas fa-envelope"></i>
+            </a>
+            
+            <a href="https://www.linkedin.com/in/shreya-patidar-961535293?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+
+            <a href="https://github.com/Shreyapatidar01" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+
+    
+            <a href="https://youtube.com/@shreyapatidar-p3x2l?si=UrIIFzIgj_37q4XH" target="_blank">
+                <i class="fab fa-youtube"></i>
+            </a>
+
+
+        </div>
     </div>
-  </section>
+</section>
+
 
   <footer>
     © 2025 Shreya Patidar — All Rights Reserved
@@ -201,4 +268,3 @@
 
 </body>
 </html>
-
