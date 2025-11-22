@@ -293,6 +293,12 @@ nav .menu a:hover {
         width: 80%;
     }
 }
+@media(max-width: 768px) {
+    .achievment,.assignment {
+        width: 100%;
+        font-size: 14px;
+    }
+}
 
 /* --------------------------------------------------------
    PROJECTS SECTION
@@ -498,3 +504,4 @@ footer {
     font-size: 16px;
   }
 }
+
