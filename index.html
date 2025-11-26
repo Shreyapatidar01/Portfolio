@@ -95,41 +95,41 @@
     </div>
   </section>
 
-<!-- Assignment -->
+<!-- // -->
  
 <section id="assignment" class="subjects-section">
-    <h2 class="section-title">Assignments</h2>
-    <p>This section showcases my academic work, projects, and assessments completed during the MCA program.</p>
+  <h2 class="section-title">Assignments</h2>
+  <p>This section showcases my academic work, projects, and assessments completed during the MCA program.</p>
 
-    <div class="subject-container">
+  <div class="subject-container">
 
-        <!-- Data Science -->
-        <div class="subject-box" data-target="ds">
-            <b>Data Science</b>
-            <div id="ds" class="internal-list">
-                <p>• <a href="#">Internal 1</a></p>
-                <p>• <a href="#">Internal 2</a></p>
-                <p>• <a href="#">Assignment</a></p>
-            </div>
-        </div>
+      <!-- Data Science -->
+      <div class="subject-box assignment-box" data-target="ds">
+          <button class="subject-btn">Data Science</button>
+          <div id="ds" class="panel" style="display:none;">
+              <p>• <a href="https://www.youtube.com/playlist?list=PLlpX--uN6F6sYhPM3m5tbPY3zL6FYz4hu">Internal 1</a></p>
+              <p>• <a href="https://www.youtube.com/playlist?list=PLlpX--uN6F6s83g88oi4y9UMOKKO2C-6e">Internal 2</a></p>
+              <p>• <a href="https://www.youtube.com/playlist?list=PLlpX--uN6F6vmSyhSMQP1RATmogmcB9_q">Assignment</a></p>
+          </div>
+      </div>
 
-        <!-- Computer Graphics -->
-        <div class="subject-box" data-target="cg">
-            <b>Computer Graphics</b>
-            <div id="cg" class="internal-list">
-                <p>• <a href="#">Assignment</a></p>
-            </div>
-        </div>
+      <!-- Computer Graphics -->
+      <div class="subject-box assignment-box" data-target="cg">
+          <button class="subject-btn">Computer Graphics</button>
+          <div id="cg" class="panel" style="display:none;">
+              <p>• <a href="https://youtu.be/b-yLfvLRl68">Assignment</a></p>
+          </div>
+      </div>
 
-        <!-- Unix -->
-        <div class="subject-box" data-target="unix">
-           <b> Unix & Shell Programming</b>
-            <div id="unix" class="internal-list">
-                <p>• <a href="#">Assignment</a></p>
-            </div>
-        </div>
+      <!-- Unix -->
+      <div class="subject-box assignment-box" data-target="unix">
+          <button class="subject-btn">Unix & Shell Programming</button>
+          <div id="unix" class="panel" style="display:none;">
+              <p>• <a href="https://youtu.be/6SrMKVfsEG0">Assignment</a></p>
+          </div>
+      </div>
 
-    </div>
+  </div>
 </section>
 
 
@@ -187,48 +187,40 @@
 <!-- // -->
 
 <!-- ⭐ ACHIEVEMENTS SECTION -->
-<section id="achievements">
-    <div class="container">
-        <h2>Achievements</h2>
-        <p>My sports achievements at State and National levels.</p>
+<section id="achievements" class="subjects-section">
+  <h2>Achievements</h2>
+  <p>My sports achievements at State and National levels.</p>
 
-        <div class="subject-container">
+  <div class="subject-container">
 
-            <!-- STATE -->
-            <div class="subject-box">
-                <button class="subject-btn" onclick="toggleAchievement('state-ach')">
-                    🏅 State Level Achievements
-                </button>
+      <!-- STATE -->
+      <div class="subject-box achievement-box" data-target="state-ach">
+          <button class="subject-btn">🏅 State Level Achievements</button>
+          <div id="state-ach" class="panel" style="display:none;">
+              <ul>
+                  <li><strong>Sports:</strong> Tennis Volleyball</li>
+                  <li>🥇 3-Time State Player</li>
+                  <li>🏅🏅 2 × Gold Medals</li>
+                  <li>🥉 1 × Bronze Medal</li>
+                  <li>🧢 Served as Captain of State Team</li>
+              </ul>
+          </div>
+      </div>
 
-                <div id="state-ach" class="achievement-content">
-                    <ul>
-                        <li><strong>Sports:</strong> Tennis Volleyball</li>
-                        <li>🥇 3-Time State Player</li>
-                        <li>🏅🏅 2 × Gold Medals</li>
-                        <li>🥉 1 × Bronze Medal</li>
-                        <li>🧢 Served as Captain of State Team</li>
-                    </ul>
-                </div>
-            </div>
+      <!-- NATIONAL -->
+      <div class="subject-box achievement-box" data-target="national-ach">
+          <button class="subject-btn">🏆 National Level Achievements</button>
+          <div id="national-ach" class="panel" style="display:none;">
+              <ul>
+                  <li><strong>Sports:</strong> Tennis Volleyball</li>
+                  <li>🥇🥇 2-Time National Player</li>
+                  <li>🌄 Represented Madhya Pradesh</li>
+                  <li>🧢 Captain of National Team</li>
+              </ul>
+          </div>
+      </div>
 
-            <!-- NATIONAL -->
-            <div class="subject-box">
-                <button class="subject-btn" onclick="toggleAchievement('national-ach')">
-                    🏆 National Level Achievements
-                </button>
-
-                <div id="national-ach" class="achievement-content">
-                    <ul>
-                        <li><strong>Sports:</strong> Tennis Volleyball</li>
-                        <li>🥇🥇 2-Time National Player</li>
-                        <li>🌄 Represented Madhya Pradesh</li>
-                        <li>🧢 Captain of National Team</li>
-                    </ul>
-                </div>
-            </div>
-
-        </div>
-    </div>
+  </div>
 </section>
 
 
