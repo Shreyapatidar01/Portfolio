@@ -1,262 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shreya Patidar - Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="script.js" defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shreya Patidar — Portfolio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav>
-    <div class="logo"><strong>Shreya</strong></div>
+  <!-- NAVBAR -->
+  <nav class="nav">
+  <div class="nav-container">
+    <a href="#" class="logo">Shreya</a>
+    
     <div class="menu">
       <a href="#home">Home</a>
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
-      <a href="#assignment">Assignment</a>
+      <a href="#assignment">Assignments</a>
       <a href="#projects">Projects</a>
       <a href="#education">Education</a>
-      <a href="#achievements">Achievements</a>
       <a href="#contact">Contact</a>
     </div>
-  </nav>
 
- <section id="home">
-  <div class="container home-flex fade-in">
-
-    <div class="hero-text">
-      <h1>Hi, I'm <span class="highlight">Shreya Patidar</span></h1>
-      <p>Pursuing Integrated MCA with a strong interest in Web Development.</p>
-
-      <a href="#projects" class="btn">See Projects</a>
-      <a href="#contact" class="btn btn-outline">Contact Me</a>
-
-      <div class="social-icons">
-        <a href="mailto:shreyapatidar2006@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a>
-         <a href="https://www.linkedin.com/in/shreya-patidar-961535293?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://youtube.com/@shreyapatidar-p3x2l?si=KrQB7rZk6ZMmrGib" target="_blank"><i class="fab fa-youtube"></i></a>
-        
-      </div>
+    <div class="nav-right">
+      <button class="theme-toggle" aria-label="Toggle theme">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+      </button>
+      <button class="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
-
-    <div class="hero-img">
-      <img src="profile1.jpeg" alt="Shreya Image">
-    </div>
-
   </div>
-</section>
+  <div class="menu-overlay"></div>
+</nav>
 
-  <!-- About Section -->
-  <section id="about">
-    <div class="container">
-      <h2>About Me</h2>
-      <div class="card slide-up">
-       <p>Hello! I'm <strong>Shreya Patidar</strong>, an Integrated MCA (BCA + MCA) student and aspiring software developer with a strong passion for building modern, user-friendly, and responsive applications.</p>
-<p>I have a solid foundation in programming, having learned <strong>C, C++, Java, HTML, CSS, and Python</strong>. I enjoy applying these skills to develop meaningful digital solutions and enhance my understanding of software development.</p>
-<p>I am committed to continuous learning, exploring new technologies, and improving my problem-solving abilities to become an efficient and dedicated developer.</p>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Skills Section -->
-  <section id="skills">
-    <div class="container">
-      <h2>Skills</h2>
-      <div class="skills-grid fade-in">
-<div class="skill-box">
-  <h3>Technical Skills</h3>
-  <ul>
-    <li>C</li>
-    <li>C++</li>
-    <li>Java</li>
-    <li>Python</li>
-    <li>HTML, CSS, JavaScript</li>
-    <li>SQL</li>
-  </ul>
-</div>
-
-        <div class="skill-box">
-          <h3>Soft Skills</h3>
-          <ul>
-            <li>Communication</li>
-            <li>Teamwork</li>
-            <li>Problem Solving</li>
-            <li>Adaptability</li>
-          </ul>
+  <!-- HERO / HOME -->
+  <section id="home" class="hero">
+    <div class="container hero-inner">
+      <div class="hero-left">
+        <h1>Hi, I'm <span class="accent">Shreya Patidar</span></h1>
+        <p class="lead">Pursuing Integrated MCA with a strong interest in Web Development.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#projects">See Projects</a>
+          <a class="btn outline" href="#contact">Contact Me</a>
         </div>
+        <div class="social">
+          <a href="https://www.linkedin.com/in/shreya-patidar-961535293?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/Shreyapatidar01" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="mailto:shreyapatidar2006@gmail.com"><i class="fa fa-envelope"></i></a>
+          <a href="https://youtube.com/@shreyapatidar-p3x2l?si=JPL5-YqS8TcrPLoD" target="_blank"><i class="fab fa-youtube"></i></a>        
+        </div>
+      </div>
 
+      <div class="hero-right">
+        <div class="avatar">
+          <img src="profile1.jpeg" alt="Shreya">
+        </div>
       </div>
     </div>
   </section>
 
-<!-- // -->
- 
-<section id="assignment" class="subjects-section">
-  <h2 class="section-title">Assignments</h2>
-  <p>This section showcases my academic work, projects, and assessments completed during the MCA program.</p>
-
-  <div class="subject-container">
-
-      <!-- Data Science -->
-      <div class="subject-box assignment-box" data-target="ds">
-          <button class="subject-btn">Data Science</button>
-          <div id="ds" class="panel" style="display:none;">
-              <p>• <a href="https://www.youtube.com/playlist?list=PLlpX--uN6F6sYhPM3m5tbPY3zL6FYz4hu">Internal 1</a></p>
-              <p>• <a href="https://www.youtube.com/playlist?list=PLlpX--uN6F6s83g88oi4y9UMOKKO2C-6e">Internal 2</a></p>
-              <p>• <a href="https://www.youtube.com/playlist?list=PLlpX--uN6F6vmSyhSMQP1RATmogmcB9_q">Assignment</a></p>
-          </div>
-      </div>
-
-      <!-- Computer Graphics -->
-      <div class="subject-box assignment-box" data-target="cg">
-          <button class="subject-btn">Computer Graphics</button>
-          <div id="cg" class="panel" style="display:none;">
-              <p>• <a href="https://youtu.be/b-yLfvLRl68">Assignment</a></p>
-          </div>
-      </div>
-
-      <!-- Unix -->
-      <div class="subject-box assignment-box" data-target="unix">
-          <button class="subject-btn">Unix & Shell Programming</button>
-          <div id="unix" class="panel" style="display:none;">
-              <p>• <a href="https://youtu.be/6SrMKVfsEG0">Assignment</a></p>
-          </div>
-      </div>
-
-  </div>
-</section>
-
-
-  <!-- Projects -->
-  <section id="projects">
+  <!-- ABOUT -->
+  <section id="about" class="section">
     <div class="container">
-      <h2>Projects</h2>
-      <div class="projects-grid">
-
-  <div class="project-card hover-zoom">
-  <img src="calculator.jpg" alt="Calculator Project">
-  <h3>Simple Calculator</h3>
-  <p>A basic calculator built using HTML, CSS, and JavaScript.</p>
-  <a href="calculator.html" target="_blank" class="btn-small">Open Calculator</a>
-</div>
-
-
-<div class="project-card hover-zoom">
-  <img src="weather.png" alt="Weather App">
-  <h3>Weather Forecasting App</h3>
-  <p>Displays real-time weather details using API integration.</p>
-   <!-- <a href="weather.html" target="_blank" class="btn-small">Open Weather App</a> -->
-</div>
-
+      <h2 class="section-title">About Me</h2>
+      <div class="card">
+     <pr>Hello! I'm Shreya Patidar, an Integrated MCA (BCA + MCA) student and aspiring software developer with a strong passion for building modern, user-friendly, and responsive applications. I enjoy working with Java, C/C++, Python, HTML, CSS, and JavaScript. 
+<br></br>
+I am currently learning Data Structures, DBMS, and web development to strengthen my technical foundation. My goal is to become a skilled full-stack developer and contribute to impactful software solutions. Apart from coding, I enjoy playing games, discovering new ideas that inspire creativity. I am always excited to take on new challenges and grow in the field of technology.</pr>
       </div>
     </div>
   </section>
-<!-- Education -->
-<section id="education">
+
+  <!-- SKILLS -->
+  <section id="skills" class="section">
+    <div class="container">
+      <h2 class="section-title">My Skills</h2>
+      <p class="section-sub">Technologies I work with</p>
+      <div class="skills-grid">
+        <div class="skill"><i class="fab fa-java"></i><span>Java</span></div>
+        <div class="skill"><i class="fas fa-code"></i><span>C</span></div>
+        <div class="skill"><i class="fas fa-laptop-code"></i><span>C++</span></div>
+        <div class="skill"><i class="fab fa-html5"></i><span>HTML5</span></div>
+        <div class="skill"><i class="fab fa-css3-alt"></i><span>CSS3</span></div>
+        <div class="skill"><i class="fab fa-js"></i><span>JavaScript</span></div>
+        <div class="skill"><i class="fab fa-python"></i><span>Python</span></div>
+        <div class="skill"><i class="fas fa-database"></i><span>Data Science</span></div>
+      </div>
+    </div>
+  </section>
+
+<!-- Assignments section  -->
+<section id="assignment" class="section">
   <div class="container">
-    <h2>Education</h2>
+    <h2 class="section-title">Assignments</h2>
+    <p class="section-sub">Explore my academic assignments by subject</p>
 
-    <div class="edu-grid slide-up">
-
-      <div class="card">
-        <h3>Integrated MCA (BCA + MCA)</h3>
-        <p>Devi Ahilya Vishwavidyalaya, Indore</p>
-        <p style="font-size: 15px; color: #555;">
-          Currently pursuing Integrated MCA with a focus on Web Development, Python, and Software Development.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Higher Secondary Education</h3>
-        <p>Paramount Academy Kasrawad</p>
-        <p style="font-size: 15px; color: #555;">
-          Completed Higher Secondary with a strong academic foundation and interest in computer science.
-        </p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- // -->
-
-<!-- ⭐ ACHIEVEMENTS SECTION -->
-<section id="achievements" class="subjects-section">
-  <h2>Achievements</h2>
-  <p>My sports achievements at State and National levels.</p>
-
-  <div class="subject-container">
-
-      <!-- STATE -->
-      <div class="subject-box achievement-box" data-target="state-ach">
-          <button class="subject-btn">🏅 State Level Achievements</button>
-          <div id="state-ach" class="panel" style="display:none;">
-              <ul>
-                  <li><strong>Sports:</strong> Tennis Volleyball</li>
-                  <li>🥇 3-Time State Player</li>
-                  <li>🏅🏅 2 × Gold Medals</li>
-                  <li>🥉 1 × Bronze Medal</li>
-                  <li>🧢 Served as Captain of State Team</li>
-              </ul>
-          </div>
-      </div>
-
-      <!-- NATIONAL -->
-      <div class="subject-box achievement-box" data-target="national-ach">
-          <button class="subject-btn">🏆 National Level Achievements</button>
-          <div id="national-ach" class="panel" style="display:none;">
-              <ul>
-                  <li><strong>Sports:</strong> Tennis Volleyball</li>
-                  <li>🥇🥇 2-Time National Player</li>
-                  <li>🌄 Represented Madhya Pradesh</li>
-                  <li>🧢 Captain of National Team</li>
-              </ul>
-          </div>
-      </div>
-
-  </div>
-</section>
-
-
-  <!-- Contact -->
-  <section id="contact">
-    <div class="container">
-        <h2>Contact</h2>
-        <p>Connect with me on my social platforms</p>
-
-        <div class="contact-icons">
-            <a href="mailto:shreyapatidar2006@gmail.com">
-                <i class="fas fa-envelope"></i>
-            </a>
-            
-            <a href="https://www.linkedin.com/in/shreya-patidar-961535293?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
-                <i class="fab fa-linkedin"></i>
-            </a>
-
-            <a href="https://github.com/Shreyapatidar01" target="_blank">
-                <i class="fab fa-github"></i>
-            </a>
-
-    
-            <a href="https://youtube.com/@shreyapatidar-p3x2l?si=UrIIFzIgj_37q4XH" target="_blank">
-                <i class="fab fa-youtube"></i>
-            </a>
-
-
+    <div class="assign-row">
+      <!-- Data Science Card -->
+      <div class="subject-card" data-subject="ds">
+        <div class="card-head">
+          <h3>Data Science</h3>
+          <p>Dive into data-driven learning with hands-on assignments</p>
+          <i class="fas fa-chevron-down toggle-icon"></i>
         </div>
+        <div class="panel" id="panel-ds">
+          <div class="panel-row">
+            <a href="https://www.youtube.com/playlist?list=PLlpX--uN6F6sYhPM3m5tbPY3zL6FYz4hu" class="panel-box">Internal 1</a>
+            <a href="https://www.youtube.com/playlist?list=PLlpX--uN6F6s83g88oi4y9UMOKKO2C-6e" class="panel-box">Internal 2</a>
+            <a href="https://www.youtube.com/playlist?list=PLlpX--uN6F6vb9jKdzvYDNzfkAndmm1e9" class="panel-box">Internal 3</a>
+            <a href="https://www.youtube.com/playlist?list=PLlpX--uN6F6vmSyhSMQP1RATmogmcB9_q" class="panel-box">End Sem Exam</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Computer Graphics Card -->
+      <div class="subject-card" data-subject="cg">
+        <div class="card-head">
+          <h3>Computer Graphics</h3>
+          <p>Create visually stunning computer-graphic models</p>
+          <i class="fas fa-chevron-down toggle-icon"></i>
+        </div>
+        <div class="panel" id="panel-cg">
+          <div class="panel-row">
+            <a href="https://youtu.be/b-yLfvLRl68" class="panel-box">Assignment </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unix Card -->
+      <div class="subject-card" data-subject="unix">
+        <div class="card-head">
+          <h3>Unix & Shell</h3>
+          <p>Master Unix fundamentals with practical exercises</p>
+          <i class="fas fa-chevron-down toggle-icon"></i>
+        </div>
+        <div class="panel" id="panel-unix">
+          <div class="panel-row">
+            <a href="https://youtu.be/6SrMKVfsEG0" class="panel-box">Assignment </a>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
 
+ <section id="projects" class="section projects">
+  <div class="container">
+    <h2 class="section-title">My Projects</h2>
+    <p class="section-sub">Some of my recent work</p>
+    
+    <div class="projects-grid">
+      <!-- Calculator Project -->
+      <div class="project-card">
+        <div class="project-image">
+          <img src="calculator.jpg" alt="Calculator App">
+          <span class="project-badge">Web</span>
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">Simple Calculator</h3>
+          <p class="project-description">
+            A basic calculator application built with HTML, CSS, and JavaScript. Performs all fundamental arithmetic operations with a clean, user-friendly interface.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">HTML</span>
+            <span class="project-tag">CSS</span>
+            <span class="project-tag">JavaScript</span>
+          </div>
+          <div class="project-links">
+            <a href="calculator.html" class="project-link primary">
+              <i class="fas fa-external-link-alt"></i> Live Demo
+            </a>
+          </div>
+        </div>
+      </div>
 
-  <footer>
-    © 2025 Shreya Patidar — All Rights Reserved
-  </footer>
+      <!-- Weather App Project -->
+      <div class="project-card">
+        <div class="project-image">
+          <img src="weather.png" alt="Weather App">
+          <span class="project-badge">Web</span>
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">Weather Forecasting App</h3>
+          <p class="project-description">
+            A weather application that displays current weather information and forecasts using weather APIs. Features location detection and responsive design.
+          </p>
+          <div class="project-tags">
+            <span class="project-tag">JavaScript</span>
+            <span class="project-tag">API</span>
+            <span class="project-tag">Responsive</span>
+          </div>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
+  <!-- EDUCATION -->
+<section id="education" class="section">
+  <div class="container">
+    <h2 class="section-title">Education</h2>
+    <div class="edu-grid">
+      <div class="edu-card">
+        <div class="edu-icon">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+        <h3>Integrated MCA</h3>
+        <p class="institute">Devi Ahilya Vishwavidyalaya, Indore</p>
+        <p class="duration">2023 - 2028</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Footer section  -->
+<footer id="contact" class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-logo">Shreya Patidar</div>
+      <p class="footer-tagline">Building digital experiences that matter</p>
+    
+      
+      <div class="social-links">
+        <a href="https://github.com/Shreyapatidar01" class="social-icon" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/shreya-patidar-961535293?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-icon" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+         <a href="mailto:shreyapatidar2006@gmail.com" class="social-icon" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://youtube.com/@shreyapatidar-p3x2l?si=JPL5-YqS8TcrPLoD" class="social-icon" aria-label="youtube">
+          <i class="fab fa-youtube"></i>
+        </a>
+       
+      </div>
+      
+      <div class="copyright">
+        &copy; 2025 Shreya Patidar. All rights reserved.
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <!-- JS-->
+  <script src="script.js"></script>
 </body>
 </html>
